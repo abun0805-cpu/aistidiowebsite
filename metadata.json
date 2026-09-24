@@ -1,0 +1,8 @@
+{
+  "name": "Panel Zone FF BD",
+  "description": "Premium safe free fire panels for Mobile, PC, and iOS with Headshot Aim, Location Cham, and instant activation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

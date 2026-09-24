@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // Shim for environments/WebViews where window.fetch has only a getter
+      (function() {
+        try {
+          var _origFetch = typeof window !== 'undefined' && window.fetch ? window.fetch.bind(window) : undefined;
+          var _currentFetch = _origFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return _currentFetch;
+            },
+            set: function(fn) {
+              _currentFetch = fn;
+            },
+            configurable: true,
+            enumerable: true,
+          });
+        } catch (e) {
+          try {
+            var proto = Object.getPrototypeOf(window);
+            if (proto) {
+              var _origProto = window.fetch ? window.fetch.bind(window) : undefined;
+              var _currProto = _origProto;
+              Object.defineProperty(proto, 'fetch', {
+                get: function() {
+                  return _currProto;
+                },
+                set: function(fn) {
+                  _currProto = fn;
+                },
+                configurable: true,
+                enumerable: true,
+              });
+            }
+          } catch (err) {}
+        }
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel Zone FF BD - Free Fire Panels for Mobile, PC & iOS</title>
+    <meta name="description" content="Panel Zone FF BD - Official Free Fire VIP Panel seller for Mobile, PC, and iOS. Headshot Aim, Location Cham, 100% safe & undetected with instant activation via bKash/Nagad." />
+    <meta property="og:title" content="Panel Zone FF BD - Free Fire Panels for Mobile, PC & iOS" />
+    <meta property="og:description" content="Panel Zone FF BD - Official Free Fire VIP Panel seller for Mobile, PC, and iOS. Headshot Aim, Location Cham, 100% safe & undetected with instant activation via bKash/Nagad." />
+    <meta property="og:image" content="/panel_zone_logo.jpg" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/panel_zone_logo.jpg" />
+    <link rel="icon" type="image/jpeg" href="/panel_zone_logo.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#050811] text-slate-100 antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

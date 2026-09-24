@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-chakra: 'Chakra Petch', sans-serif;
+    --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-jakarta);
+    background-color: #040711;
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-gaming {
+    font-family: var(--font-chakra);
+  }
+}
+
+.clip-corner-bl {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+}
+
+.clip-corner-cut {
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+
+.bg-cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+}
+
+.neon-glow-mobile {
+  box-shadow: 0 0 25px -5px rgba(14, 165, 233, 0.25), inset 0 0 15px -8px rgba(14, 165, 233, 0.2);
+}
+
+.neon-glow-pc {
+  box-shadow: 0 0 25px -5px rgba(16, 185, 129, 0.25), inset 0 0 15px -8px rgba(16, 185, 129, 0.2);
+}
+
+.neon-glow-ios {
+  box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.25), inset 0 0 15px -8px rgba(59, 130, 246, 0.2);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
