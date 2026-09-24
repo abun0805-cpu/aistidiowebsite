@@ -1,7 +1,7 @@
 import React from 'react';
 import { ShieldAlert } from 'lucide-react';
-import { TelegramIcon } from './PanelIcons';
-import { TELEGRAM_URL, TELEGRAM_USERNAME } from '../data/panelsData';
+import { WhatsAppIcon } from './PanelIcons';
+import { WHATSAPP_URL } from '../data/panelsData';
 
 interface FooterProps {
   language: 'en' | 'bn';
@@ -42,14 +42,16 @@ export const Footer: React.FC<FooterProps> = ({ language }) => {
             <a href="#faq" className="hover:text-amber-400 transition-colors">
               {language === 'en' ? 'FAQ' : 'প্রশ্নোত্তর'}
             </a>
+            {/* WhatsApp SMS Contact Button */}
             <a
-              href={TELEGRAM_URL}
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-[#0088cc] hover:text-[#33a3dc] font-gaming font-bold tracking-wide"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#25D366]/15 hover:bg-[#25D366]/25 border border-[#25D366]/60 text-[#25D366] hover:text-emerald-300 font-gaming font-bold tracking-wide transition-all shadow-[0_0_15px_rgba(37,211,102,0.25)] hover:shadow-[0_0_20px_rgba(37,211,102,0.45)] hover:scale-105 cursor-pointer active:scale-95"
+              title="Chat on WhatsApp"
             >
-              <TelegramIcon className="w-4 h-4 fill-current" />
-              <span>Telegram: {TELEGRAM_USERNAME}</span>
+              <WhatsAppIcon className="w-4 h-4 fill-[#25D366] shrink-0" />
+              <span>{language === 'en' ? 'WhatsApp SMS' : 'হোয়াটসঅ্যাপ এসএমএস'}</span>
             </a>
           </div>
         </div>

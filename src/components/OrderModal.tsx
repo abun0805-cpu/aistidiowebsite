@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { X, Copy, Check, Download, ExternalLink, ShieldCheck, Sparkles } from 'lucide-react';
 import { PanelItem, PriceTier } from '../types';
-import { PAYMENT_METHODS, TELEGRAM_URL } from '../data/panelsData';
-import { TelegramIcon } from './PanelIcons';
+import { PAYMENT_METHODS, WHATSAPP_URL } from '../data/panelsData';
+import { WhatsAppIcon } from './PanelIcons';
 
 interface OrderModalProps {
   panel: PanelItem;

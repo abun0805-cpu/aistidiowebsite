@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, ShieldCheck, Check, Sparkles, Smartphone, Monitor, Download } from 'lucide-react';
 import { PanelItem, PriceTier } from '../types';
-import { AppleIcon, TelegramIcon } from './PanelIcons';
-import { TELEGRAM_URL } from '../data/panelsData';
+import { AppleIcon, WhatsAppIcon } from './PanelIcons';
+import { WHATSAPP_URL } from '../data/panelsData';
 
 interface PanelCardProps {
   panel: PanelItem;
@@ -55,10 +55,8 @@ export const PanelCard: React.FC<PanelCardProps> = ({
     blue: 'bg-sky-400 shadow-[0_0_8px_rgba(56,189,248,0.8)]',
   };
 
-  // Pre-generate custom Telegram URL for this specific panel and selected tier
-  const telegramOrderUrl = `${TELEGRAM_URL}?text=${encodeURIComponent(
-    `Hello Panel Zone FF BD! I want to buy the *${panel.name}* (${selectedTier.duration} - ৳${selectedTier.price}). Please send payment details and key.`
-  )}`;
+  // Custom WhatsApp contact URL
+  const contactOrderUrl = WHATSAPP_URL;
 
   return (
     <div
@@ -234,16 +232,16 @@ export const PanelCard: React.FC<PanelCardProps> = ({
             )}
           </button>
 
-          {/* FUNCTION 2: কন্টাক্ট */}
+          {/* FUNCTION 2: কন্টাক্ট (হোয়াটসঅ্যাপ) */}
           <a
-            href={telegramOrderUrl}
+            href={contactOrderUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-2.5 px-4 rounded-lg bg-[#0088cc] hover:bg-[#0099e6] text-white font-gaming font-bold text-xs sm:text-sm tracking-wider uppercase flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(0,136,204,0.35)] transition-all cursor-pointer active:scale-[0.99]"
+            className="w-full py-2.5 px-4 rounded-lg bg-[#25D366] hover:bg-[#20bd5a] text-white font-gaming font-bold text-xs sm:text-sm tracking-wider uppercase flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(37,211,102,0.35)] transition-all cursor-pointer active:scale-[0.99]"
           >
-            <TelegramIcon className="w-4 h-4 fill-white shrink-0" />
+            <WhatsAppIcon className="w-4 h-4 fill-white shrink-0" />
             <span>
-              {language === 'en' ? 'CONTACT' : 'কন্টাক্ট'}
+              {language === 'en' ? 'CONTACT (WHATSAPP)' : 'কন্টাক্ট (হোয়াটসঅ্যাপ)'}
             </span>
           </a>
 

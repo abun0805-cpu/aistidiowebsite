@@ -228,9 +228,9 @@ export const SetupGuide: React.FC<SetupGuideProps> = ({ language }) => {
             href={TELEGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-gaming font-bold text-amber-300 hover:text-amber-200 whitespace-nowrap underline underline-offset-4 flex items-center gap-1.5"
+            className="text-xs font-gaming font-bold text-[#25D366] hover:text-emerald-300 whitespace-nowrap underline underline-offset-4 flex items-center gap-1.5"
           >
-            <span>{language === 'en' ? 'Need Live Telegram Support?' : 'টেলিগ্রাম লাইভ সাপোর্ট লাগবে?'}</span>
+            <span>{language === 'en' ? 'Need Live WhatsApp Support?' : 'হোয়াটসঅ্যাপ লাইভ সাপোর্ট লাগবে?'}</span>
           </a>
         </div>
       </div>
