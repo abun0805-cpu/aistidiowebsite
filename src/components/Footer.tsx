@@ -1,7 +1,7 @@
 import React from 'react';
 import { ShieldAlert } from 'lucide-react';
-import { WhatsAppIcon } from './PanelIcons';
-import { WHATSAPP_URL } from '../data/panelsData';
+import { WhatsAppIcon, FacebookIcon } from './PanelIcons';
+import { WHATSAPP_URL, FACEBOOK_URL } from '../data/panelsData';
 
 interface FooterProps {
   language: 'en' | 'bn';
@@ -52,6 +52,18 @@ export const Footer: React.FC<FooterProps> = ({ language }) => {
             >
               <WhatsAppIcon className="w-4 h-4 fill-[#25D366] shrink-0" />
               <span>{language === 'en' ? 'WhatsApp SMS' : 'হোয়াটসঅ্যাপ এসএমএস'}</span>
+            </a>
+
+            {/* Facebook Page Button */}
+            <a
+              href={FACEBOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1877F2]/15 hover:bg-[#1877F2]/25 border border-[#1877F2]/60 text-[#1877F2] hover:text-sky-300 font-gaming font-bold tracking-wide transition-all shadow-[0_0_15px_rgba(24,119,242,0.25)] hover:shadow-[0_0_20px_rgba(24,119,242,0.45)] hover:scale-105 cursor-pointer active:scale-95"
+              title="Panel Zone FF BD on Facebook"
+            >
+              <FacebookIcon className="w-4 h-4 fill-[#1877F2] shrink-0" />
+              <span>{language === 'en' ? 'Facebook' : 'ফেসবুক'}</span>
             </a>
           </div>
         </div>

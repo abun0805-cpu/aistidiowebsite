@@ -4,6 +4,7 @@ export const WHATSAPP_URL = 'https://api.whatsapp.com/send?phone=8801937682263&s
 export const TELEGRAM_URL = WHATSAPP_URL;
 export const TELEGRAM_USERNAME = 'WhatsApp SMS';
 export const WHATSAPP_DISPLAY_LABEL = 'WhatsApp SMS';
+export const FACEBOOK_URL = 'https://www.facebook.com/PanelZoneFFBD';
 
 // ---------------------------------------------------------------------------
 // DEDICATED PANEL DOWNLOAD LINKS (Easily update links for Mobile, PC, iOS):

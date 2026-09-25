@@ -247,7 +247,7 @@ export const PanelCard: React.FC<PanelCardProps> = ({
 
           {/* FUNCTION 3: ডাউনলোড প্যানেল (DIRECT DOWNLOAD LINK) */}
           <a
-            href={panel.downloadUrl || TELEGRAM_URL}
+            href={panel.downloadUrl || WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             download

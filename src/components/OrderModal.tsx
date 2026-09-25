@@ -30,21 +30,11 @@ export const OrderModal: React.FC<OrderModalProps> = ({
     setTimeout(() => setCopiedNumber(false), 2000);
   };
 
-  const downloadLink = panel.downloadUrl || TELEGRAM_URL;
+  const downloadLink = panel.downloadUrl || WHATSAPP_URL;
 
-  // Pre-generate Telegram message for instant key delivery
-  const telegramUrl = () => {
-    const text = encodeURIComponent(
-      `🎮 *PANEL ZONE FF BD ORDER & ACTIVATION*\n` +
-        `━━━━━━━━━━━━━━━━━━\n` +
-        `• Panel: ${panel.name} (${panel.nameBn})\n` +
-        `• Duration: ${selectedTier.duration}\n` +
-        `• Price: ৳${selectedTier.price}\n` +
-        `• Payment Method: ${currentMethod.name}\n` +
-        `━━━━━━━━━━━━━━━━━━\n` +
-        `আমি পেমেন্ট করতে চাই এবং ডাউনলোড করেছি। অনুগ্রহ করে আমার ভিআইপি অ্যাক্টিভেশন কী দিন!`
-    );
-    return `${TELEGRAM_URL}?text=${text}`;
+  // WhatsApp order link
+  const whatsappUrl = () => {
+    return WHATSAPP_URL;
   };
 
   const getPlatformFileLabel = () => {
@@ -227,23 +217,23 @@ export const OrderModal: React.FC<OrderModalProps> = ({
           <p className="text-[11px] text-slate-400 leading-relaxed">
             {language === 'en'
               ? `Send ৳${selectedTier.price} to this ${currentMethod.name} Personal number (Send Money), then tap below to contact us on Telegram with your screenshot to get your VIP activation key instantly.`
-              : `উপরের ${currentMethod.name} পার্সোনাল নম্বরে ৳${selectedTier.price} Send Money করুন। এরপর নিচে টেলিগ্রাম বাটনে ক্লিক করে স্ক্রিনশট পাঠিয়ে ১ মিনিটে অ্যাক্টিভেশন কী গ্রহণ করুন।`}
+              : `উপরের ${currentMethod.name} পার্সোনাল নম্বরে ৳${selectedTier.price} Send Money করুন। এরপর নিচে হোয়াটসঅ্যাপ বাটনে ক্লিক করে স্ক্রিনশট পাঠিয়ে ১ মিনিটে অ্যাক্টিভেশন কী গ্রহণ করুন।`}
           </p>
         </div>
 
-        {/* Action: Direct Telegram Key Delivery */}
+        {/* Action: Direct WhatsApp Key Delivery */}
         <div>
           <a
-            href={telegramUrl()}
+            href={whatsappUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full py-3 px-4 rounded-xl bg-[#0088cc] hover:bg-[#0099e6] text-white font-gaming font-bold text-xs sm:text-sm tracking-wider uppercase flex items-center justify-center gap-2.5 shadow-[0_0_20px_rgba(0,136,204,0.4)] transition-all cursor-pointer active:scale-95"
+            className="w-full py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-gaming font-bold text-xs sm:text-sm tracking-wider uppercase flex items-center justify-center gap-2.5 shadow-[0_0_20px_rgba(37,211,102,0.4)] transition-all cursor-pointer active:scale-95"
           >
-            <TelegramIcon className="w-5 h-5 fill-white shrink-0" />
+            <WhatsAppIcon className="w-5 h-5 fill-white shrink-0" />
             <span>
               {language === 'en'
-                ? 'CONFIRM PAYMENT & GET KEY ON TELEGRAM'
-                : 'টেলিগ্রামে স্ক্রিনশট পাঠিয়ে কী (KEY) নিন'}
+                ? 'CONFIRM PAYMENT & GET KEY ON WHATSAPP'
+                : 'হোয়াটসঅ্যাপে স্ক্রিনশট পাঠিয়ে কী (KEY) নিন'}
             </span>
           </a>
         </div>
