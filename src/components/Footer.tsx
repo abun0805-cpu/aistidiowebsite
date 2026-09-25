@@ -42,7 +42,7 @@ export const Footer: React.FC<FooterProps> = ({ language }) => {
             <a href="#faq" className="hover:text-amber-400 transition-colors">
               {language === 'en' ? 'FAQ' : 'প্রশ্নোত্তর'}
             </a>
-            {/* WhatsApp SMS Contact Button */}
+            {/* WhatsApp Contact Button */}
             <a
               href={WHATSAPP_URL}
               target="_blank"
@@ -51,7 +51,7 @@ export const Footer: React.FC<FooterProps> = ({ language }) => {
               title="Chat on WhatsApp"
             >
               <WhatsAppIcon className="w-4 h-4 fill-[#25D366] shrink-0" />
-              <span>{language === 'en' ? 'WhatsApp SMS' : 'হোয়াটসঅ্যাপ এসএমএস'}</span>
+              <span>{language === 'en' ? 'WhatsApp' : 'হোয়াটসঅ্যাপ'}</span>
             </a>
 
             {/* Facebook Page Button */}
