@@ -185,22 +185,22 @@ export const SetupGuide: React.FC<SetupGuideProps> = ({ language }) => {
           </div>
         </div>
 
-        {/* Steps Grid */}
+        {/* Steps Grid with 3D Card Hover Depth */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {currentGuide.steps.map((step, idx) => (
             <div
               key={idx}
-              className="relative p-5 rounded-lg border border-slate-800/90 bg-[#060c1d] hover:border-slate-700 transition-all flex flex-col justify-between"
+              className="relative p-5 rounded-xl border border-slate-700/80 bg-[#060c1d]/90 hover:bg-[#091530] hover:border-cyan-400 hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between backdrop-blur-md group"
             >
               <div>
-                <div className="font-gaming text-2xl font-bold text-slate-600 mb-2">
+                <div className="font-gaming text-3xl font-extrabold text-cyan-400/40 group-hover:text-cyan-400 transition-colors mb-2">
                   {step.num}
                 </div>
-                <h3 className="text-sm font-bold text-white mb-1.5">{step.title}</h3>
-                <p className="text-xs text-slate-400 leading-relaxed">{step.desc}</p>
+                <h3 className="text-sm font-bold text-white mb-1.5 group-hover:text-cyan-200 transition-colors">{step.title}</h3>
+                <p className="text-xs text-slate-300 leading-relaxed font-medium">{step.desc}</p>
               </div>
-              <div className="pt-4 mt-2 border-t border-slate-800/60 flex items-center gap-1 text-[11px] text-cyan-400 font-mono">
-                <CheckCircle2 className="w-3.5 h-3.5" />
+              <div className="pt-4 mt-3 border-t border-slate-700/80 flex items-center gap-1.5 text-xs text-cyan-300 font-mono font-bold">
+                <CheckCircle2 className="w-4 h-4 text-cyan-400" />
                 <span>{language === 'en' ? 'Verified Safe' : 'ভেরিফাইড ও সেইফ'}</span>
               </div>
             </div>
@@ -208,7 +208,7 @@ export const SetupGuide: React.FC<SetupGuideProps> = ({ language }) => {
         </div>
 
         {/* Pro Safety Notice */}
-        <div className="mt-8 p-4 rounded-lg bg-cyan-950/20 border border-cyan-500/30 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div className="mt-8 p-4 rounded-xl bg-cyan-950/30 border border-cyan-500/40 shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <div className="flex items-start gap-3">
             <ShieldCheck className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
             <div>
@@ -217,7 +217,7 @@ export const SetupGuide: React.FC<SetupGuideProps> = ({ language }) => {
                   ? 'Anti-Ban Protection & Main ID Recommended'
                   : 'অ্যান্টি-ব্যান সুরক্ষা ও মেইন আইডি রেকমেন্ডেশন'}
               </h4>
-              <p className="text-[11px] text-slate-400 mt-0.5">
+              <p className="text-xs text-slate-300 font-medium mt-0.5">
                 {language === 'en'
                   ? 'All 3 categories are crafted with safe natural head tracking FOV so opponent players cannot detect or report your gameplay.'
                   : 'আমাদের সব প্যানেলে ন্যাচারাল হেড ট্র্যাকিং থাকায় সাধারণ স্পেক্টেটররা কোনো অস্বাভাবিকতা দেখতে পায় না।'}
@@ -225,10 +225,10 @@ export const SetupGuide: React.FC<SetupGuideProps> = ({ language }) => {
             </div>
           </div>
           <a
-            href={TELEGRAM_URL}
+            href="https://wa.me/message/CZX426NMSQ7LN1"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-gaming font-bold text-[#25D366] hover:text-emerald-300 whitespace-nowrap underline underline-offset-4 flex items-center gap-1.5"
+            className="text-xs font-gaming font-extrabold text-[#25D366] hover:text-emerald-200 whitespace-nowrap flex items-center gap-1.5 bg-[#25D366]/15 hover:bg-[#25D366]/25 border border-[#25D366]/60 px-3 py-1.5 rounded-lg transition-all"
           >
             <span>{language === 'en' ? 'Need Live WhatsApp Support?' : 'হোয়াটসঅ্যাপ লাইভ সাপোর্ট লাগবে?'}</span>
           </a>

@@ -7,6 +7,7 @@ import { SetupGuide } from './components/SetupGuide';
 import { FeaturesComparison, CustomerVouches, FAQSection } from './components/FeaturesComparison';
 import { FloatingSupport } from './components/FloatingSupport';
 import { Footer } from './components/Footer';
+import { ThreeBackground } from './components/ThreeBackground';
 
 export default function App() {
   const [language, setLanguage] = useState<'en' | 'bn'>('bn');
@@ -37,15 +38,18 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#040711] bg-cyber-grid text-slate-100 flex flex-col selection:bg-amber-500/30 selection:text-amber-200">
-      {/* Top Navigation */}
+    <div className="relative min-h-screen bg-[#040711] bg-cyber-grid text-slate-100 flex flex-col selection:bg-amber-500/30 selection:text-amber-200 overflow-x-hidden">
+      {/* 3D Interactive Cyber Background */}
+      <ThreeBackground />
+
+      {/* Top Navigation - Always fixed at the very top */}
       <Navbar
         language={language}
         setLanguage={setLanguage}
       />
 
-      {/* Main Content Area */}
-      <main className="flex-1">
+      {/* Main Content Area - padded so content starts right below fixed top header */}
+      <main className="relative z-10 flex-1 pt-28 lg:pt-16">
         {/* Hero Section */}
         <HeroSection
           language={language}

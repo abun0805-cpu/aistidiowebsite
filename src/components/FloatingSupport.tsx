@@ -19,7 +19,7 @@ export const FloatingSupport: React.FC<FloatingSupportProps> = ({ language }) =>
       >
         <WhatsAppIcon className="w-5 h-5 fill-white shrink-0" />
         <span className="font-gaming tracking-wide">
-          {language === 'en' ? 'WhatsApp Support' : 'হোয়াটসঅ্যাপ সাপোর্ট'}
+          {language === 'en' ? 'Contact WhatsApp' : 'কন্টাক্ট হোয়াটসঅ্যাপ'}
         </span>
       </a>
     </div>

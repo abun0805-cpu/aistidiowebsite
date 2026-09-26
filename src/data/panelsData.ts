@@ -9,9 +9,9 @@ export const FACEBOOK_URL = 'https://www.facebook.com/PanelZoneFFBD';
 // ---------------------------------------------------------------------------
 // DEDICATED PANEL DOWNLOAD LINKS (Easily update links for Mobile, PC, iOS):
 // ---------------------------------------------------------------------------
-export const MOBILE_PANEL_DOWNLOAD_URL = 'https://cdn.discordapp.com/attachments/1545177649964519574/1552688365726339072/ROYAL_CHEAT-1.apk?ex=6ab68539&is=6ab533b9&hm=a7d0f22e47971668d26021bfcca79435dd00cc2b7eb1d7ccb02a8ce659213774&'; // <-- Update Mobile APK link here
-export const PC_PANEL_DOWNLOAD_URL = 'https://cdn.discordapp.com/attachments/1545177649964519574/1552688307811651614/BR.Mods.Launcher.exe?ex=6ab6852c&is=6ab533ac&hm=8cba2cc952ca28cea64ef7d460efcc663646656230cb7a160198a05bbfc8e2f4&';     // <-- Update PC ZIP/EXE link here
-export const IOS_PANEL_DOWNLOAD_URL = 'https://api.monitecheats.com/telegram/download/6dd39b1770851a66e6898899e60257a5a64d0482';    // <-- Update iOS Profile/IPA link here
+export const MOBILE_PANEL_DOWNLOAD_URL = 'https://dub.sh/phonepnlapk'; // <-- Update Mobile APK link here
+export const PC_PANEL_DOWNLOAD_URL = 'https://dub.sh/pcnenalexe';     // <-- Update PC ZIP/EXE link here
+export const IOS_PANEL_DOWNLOAD_URL = 'https://dub.sh/iosipafile';    // <-- Update iOS Profile/IPA link here
 
 export const PANELS_DATA: PanelItem[] = [
   {
@@ -45,10 +45,9 @@ export const PANELS_DATA: PanelItem[] = [
       'সহজ ফ্লোটিং মেনু অন/অফ',
     ],
     prices: [
-      { id: 'm-40d', duration: '40 days', durationBn: '৪০ দিন', price: 390 },
-      { id: 'm-3m', duration: '3 months', durationBn: '৩ মাস', price: 520, popular: true },
-      { id: 'm-6m', duration: '6 months', durationBn: '৬ মাস', price: 690 },
-      { id: 'm-life', duration: 'Lifetime', durationBn: 'লাইফটাইম (আজীবন)', price: 1190 },
+      { id: 'm-30d', duration: '30 days', durationBn: '৩০ দিন', price: 390 },
+      { id: 'm-3m', duration: '3 months', durationBn: '৩ মাস', price: 550, popular: true },
+      { id: 'm-life', duration: 'Lifetime', durationBn: 'সারাজীবন (লাইফটাইম)', price: 1390 },
     ],
     compatibility: 'Android 9 - 15+ (All Brands: Xiaomi, Realme, Samsung, Vivo, etc.)',
     compatibilityBn: 'অ্যান্ড্রয়েড ৯ - ১৫+ (শাওমি, রিয়েলমি, স্যামসাং, ভিভো সহ সব ফোন)',
@@ -87,8 +86,8 @@ export const PANELS_DATA: PanelItem[] = [
       'সহজ হটকি শর্টকাট (F1, F2, CapsLock)',
     ],
     prices: [
-      { id: 'pc-1m', duration: '1 month', durationBn: '১ মাস', price: 850 },
-      { id: 'pc-life', duration: 'Lifetime', durationBn: 'লাইফটাইম (আজীবন)', price: 2490, popular: true },
+      { id: 'pc-1m', duration: '1 month', durationBn: '১ মাস', price: 750 },
+      { id: 'pc-life', duration: 'Lifetime', durationBn: 'সারাজীবন (লাইফটাইম)', price: 2490, popular: true },
     ],
     compatibility: 'Windows 10 / 11 (64-bit) · All Emulators',
     compatibilityBn: 'উইন্ডোজ ১০ / ১১ (৬৪-বিট) · সব এমুলেটরে চলে',
@@ -126,10 +125,9 @@ export const PANELS_DATA: PanelItem[] = [
       'মেইন র‍্যাংকড আইডিতে শতভাগ নিরাপদ',
     ],
     prices: [
-      { id: 'ios-1m', duration: '1 month', durationBn: '১ মাস', price: 750 },
-      { id: 'ios-3m', duration: '3 months', durationBn: '৩ মাস', price: 990, popular: true },
-      { id: 'ios-5m', duration: '5 months', durationBn: '৫ মাস', price: 1250 },
-      { id: 'ios-life', duration: 'Lifetime', durationBn: 'লাইফটাইম (আজীবন)', price: 1990 },
+      { id: 'ios-1m', duration: '1 month', durationBn: '১ মাস', price: 900 },
+      { id: 'ios-3m', duration: '3 months', durationBn: '৩ মাস', price: 1250, popular: true },
+      { id: 'ios-life', duration: 'Lifetime', durationBn: 'সারাজীবন (লাইফটাইম)', price: 1990 },
     ],
     compatibility: 'iOS 15.0 - 18.2+ · iPhone & iPad',
     compatibilityBn: 'আইওএস ১৫.০ - ১৮.২+ · সব আইফোন ও আইপ্যাডে চলবে',

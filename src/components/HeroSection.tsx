@@ -77,14 +77,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             : 'বাংলাদেশের বিশ্বস্ত ফ্রি ফায়ার প্যানেল সেলার। হেডশট এইম, লোকেশন চাম ও নো-রিকয়েল। মোবাইল, পিসি ও আইওএস এ ১০০% নিরাপদ।'}
         </p>
 
-        {/* Quick Category Jump Buttons */}
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+        {/* Quick Category Jump Buttons with 3D Elevation */}
+        <div className="mt-7 flex flex-wrap items-center justify-center gap-3.5">
           <button
             onClick={() => onSelectCategory('mobile')}
-            className={`flex items-center gap-2 px-4 py-2.5 rounded-lg border transition-all text-xs font-gaming font-bold tracking-wider uppercase cursor-pointer ${
+            className={`flex items-center gap-2 px-5 py-3 rounded-xl border transition-all duration-300 text-xs sm:text-sm font-gaming font-extrabold tracking-wider uppercase cursor-pointer hover:-translate-y-1 ${
               selectedCategory === 'mobile'
-                ? 'bg-cyan-500/25 border-cyan-400 text-cyan-200 shadow-[0_0_20px_rgba(6,182,212,0.45)] ring-2 ring-cyan-400/50 scale-[1.03]'
-                : 'border-cyan-500/50 bg-[#061226]/80 text-cyan-300 hover:bg-cyan-950/60 hover:border-cyan-400 shadow-[0_0_12px_rgba(6,182,212,0.2)]'
+                ? 'bg-cyan-500/30 border-cyan-400 text-cyan-200 shadow-[0_0_25px_rgba(6,182,212,0.6)] ring-2 ring-cyan-400/60 scale-105'
+                : 'border-cyan-500/60 bg-[#061226]/90 text-cyan-300 hover:bg-cyan-900/40 hover:border-cyan-300 shadow-[0_4px_15px_rgba(6,182,212,0.3)]'
             }`}
           >
             <Smartphone className="w-4 h-4" />
@@ -93,10 +93,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
           <button
             onClick={() => onSelectCategory('pc')}
-            className={`flex items-center gap-2 px-4 py-2.5 rounded-lg border transition-all text-xs font-gaming font-bold tracking-wider uppercase cursor-pointer ${
+            className={`flex items-center gap-2 px-5 py-3 rounded-xl border transition-all duration-300 text-xs sm:text-sm font-gaming font-extrabold tracking-wider uppercase cursor-pointer hover:-translate-y-1 ${
               selectedCategory === 'pc'
-                ? 'bg-emerald-500/25 border-emerald-400 text-emerald-200 shadow-[0_0_20px_rgba(16,185,129,0.45)] ring-2 ring-emerald-400/50 scale-[1.03]'
-                : 'border-emerald-500/50 bg-[#06181b]/80 text-emerald-300 hover:bg-emerald-950/60 hover:border-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.2)]'
+                ? 'bg-emerald-500/30 border-emerald-400 text-emerald-200 shadow-[0_0_25px_rgba(16,185,129,0.6)] ring-2 ring-emerald-400/60 scale-105'
+                : 'border-emerald-500/60 bg-[#06181b]/90 text-emerald-300 hover:bg-emerald-900/40 hover:border-emerald-300 shadow-[0_4px_15px_rgba(16,185,129,0.3)]'
             }`}
           >
             <Monitor className="w-4 h-4" />
@@ -105,10 +105,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
           <button
             onClick={() => onSelectCategory('ios')}
-            className={`flex items-center gap-2 px-4 py-2.5 rounded-lg border transition-all text-xs font-gaming font-bold tracking-wider uppercase cursor-pointer ${
+            className={`flex items-center gap-2 px-5 py-3 rounded-xl border transition-all duration-300 text-xs sm:text-sm font-gaming font-extrabold tracking-wider uppercase cursor-pointer hover:-translate-y-1 ${
               selectedCategory === 'ios'
-                ? 'bg-amber-500/25 border-amber-400 text-amber-200 shadow-[0_0_20px_rgba(245,158,11,0.45)] ring-2 ring-amber-400/50 scale-[1.03]'
-                : 'border-amber-500/50 bg-[#1c1206]/80 text-amber-300 hover:bg-amber-950/60 hover:border-amber-400 shadow-[0_0_12px_rgba(245,158,11,0.2)]'
+                ? 'bg-amber-500/30 border-amber-400 text-amber-200 shadow-[0_0_25px_rgba(245,158,11,0.6)] ring-2 ring-amber-400/60 scale-105'
+                : 'border-amber-500/60 bg-[#1c1206]/90 text-amber-300 hover:bg-amber-900/40 hover:border-amber-300 shadow-[0_4px_15px_rgba(245,158,11,0.3)]'
             }`}
           >
             <AppleIcon className="w-4 h-4" />
